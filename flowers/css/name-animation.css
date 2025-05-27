@@ -1,0 +1,38 @@
+/* Name Animation Styling */
+.name-container {
+  position: absolute;
+  bottom: 20vmin;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1vmin;
+  z-index: 20;
+  margin-bottom: 5vmin;
+}
+
+.name-letter {
+  font-family: 'Arial', sans-serif;
+  font-size: 6vmin;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.8),
+    0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 15px rgba(145, 233, 255, 0.5),
+    0 0 20px rgba(145, 233, 255, 0.3);
+  opacity: 0;
+  transform: translateY(10vmin);
+  animation: fadeInLetter 1s ease-out forwards;
+  animation-delay: var(--delay);
+}
+
+@keyframes fadeInLetter {
+  0% {
+    opacity: 0;
+    transform: translateY(10vmin) rotate(-5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+}
